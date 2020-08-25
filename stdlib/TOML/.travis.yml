@@ -17,7 +17,7 @@ jobs:
       arch: x86
   include:
     - stage: "Benchmarks"
-      julia: 1.5
+      julia: nightly
       os: linux
       script:
         - julia --project=benchmark/ -e 'using Pkg; Pkg.instantiate(); include("benchmark/benchmarks.jl"); run(SUITE)'
